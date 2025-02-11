@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Card for Jaabi</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating hearts animation */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
+            opacity: 0.7;
+            animation: floatUp 5s infinite linear;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 0.7; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+
+        .heart:nth-child(2) { left: 20%; animation-duration: 6s; }
+        .heart:nth-child(3) { left: 40%; animation-duration: 4s; }
+        .heart:nth-child(4) { left: 60%; animation-duration: 5.5s; }
+        .heart:nth-child(5) { left: 80%; animation-duration: 6.5s; }
+
+        /* Title */
+        .title {
+            font-size: 28px;
+            font-family: 'Great Vibes', cursive;
+            color: #ff4e50;
+            margin-bottom: 10px;
+        }
+
+        /* Heartbeat animation */
+        .message {
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+            padding: 10px;
+        }
+
+        .message:hover {
+            animation: heartbeat 1s infinite alternate;
+        }
+
+        @keyframes heartbeat {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        /* Illustration */
+        .illustration {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .illustration:hover {
+            transform: scale(1.1);
+        }
+
+        /* Button */
+        .btn {
+            background: #ff4e50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #d43f44;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Floating Hearts -->
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+
+        <!-- Love Message -->
+        <h1 class="title">To My Love, Jaabi ❤️</h1>
+        <p class="message">No distance can ever separate what the heart has already chosen.  
+        Though miles apart, our love keeps us close.  
+        I miss you, I cherish you, and I can't wait for the day we hold hands again.  
+        Forever yours, [Your Name] 💕</p>
+
+        <!-- Illustration -->
+        <img src="https://i.imgur.com/5X6o2WJ.png" alt="LDR Love" class="illustration">
+
+        <!-- Button -->
+        <button class="btn" onclick="showLove()">Click for a Surprise!</button>
+    </div>
+
+    <script>
+        function showLove() {
+            alert("Jaabi, you are my forever love! 💖 Sending you all my hugs and kisses!");
+        }
+    </script>
+
+</body>
+</html>
